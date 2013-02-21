@@ -16,6 +16,15 @@
 		D42187B316D5336400AD4B0E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D42187B216D5336400AD4B0E /* Default.png */; };
 		D42187B516D5336400AD4B0E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D42187B416D5336400AD4B0E /* Default@2x.png */; };
 		D42187B716D5336400AD4B0E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D42187B616D5336400AD4B0E /* Default-568h@2x.png */; };
+		D42187BF16D533E900AD4B0E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42187BE16D533E900AD4B0E /* RootViewController.m */; };
+		D42187C316D5351600AD4B0E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D42187C216D5351600AD4B0E /* JSONKit.m */; };
+		D42187CC16D5352F00AD4B0E /* FlickrAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D42187C516D5352F00AD4B0E /* FlickrAPI.m */; };
+		D42187CD16D5352F00AD4B0E /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D42187C716D5352F00AD4B0E /* ImageTableViewCell.m */; };
+		D42187CE16D5352F00AD4B0E /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42187C916D5352F00AD4B0E /* ImageViewController.m */; };
+		D42187CF16D5352F00AD4B0E /* WebServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D42187CB16D5352F00AD4B0E /* WebServiceClient.m */; };
+		D42187D116D539CD00AD4B0E /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42187D016D539CD00AD4B0E /* SDWebImage.framework */; };
+		D42187D316D539FF00AD4B0E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42187D216D539FF00AD4B0E /* ImageIO.framework */; };
+		D42187D716D579B900AD4B0E /* photoDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = D42187D616D579B900AD4B0E /* photoDefault.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +41,21 @@
 		D42187B216D5336400AD4B0E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D42187B416D5336400AD4B0E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D42187B616D5336400AD4B0E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D42187BD16D533E900AD4B0E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D42187BE16D533E900AD4B0E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		D42187C116D5351600AD4B0E /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		D42187C216D5351600AD4B0E /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		D42187C416D5352F00AD4B0E /* FlickrAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPI.h; sourceTree = "<group>"; };
+		D42187C516D5352F00AD4B0E /* FlickrAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrAPI.m; sourceTree = "<group>"; };
+		D42187C616D5352F00AD4B0E /* ImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableViewCell.h; sourceTree = "<group>"; };
+		D42187C716D5352F00AD4B0E /* ImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
+		D42187C816D5352F00AD4B0E /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		D42187C916D5352F00AD4B0E /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		D42187CA16D5352F00AD4B0E /* WebServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceClient.h; sourceTree = "<group>"; };
+		D42187CB16D5352F00AD4B0E /* WebServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceClient.m; sourceTree = "<group>"; };
+		D42187D016D539CD00AD4B0E /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = MGTest/SDWebImage.framework; sourceTree = "<group>"; };
+		D42187D216D539FF00AD4B0E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		D42187D616D579B900AD4B0E /* photoDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photoDefault.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,9 +63,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42187D316D539FF00AD4B0E /* ImageIO.framework in Frameworks */,
 				D42187A116D5336400AD4B0E /* UIKit.framework in Frameworks */,
 				D42187A316D5336400AD4B0E /* Foundation.framework in Frameworks */,
 				D42187A516D5336400AD4B0E /* CoreGraphics.framework in Frameworks */,
+				D42187D116D539CD00AD4B0E /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +94,8 @@
 		D421879F16D5336400AD4B0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D42187D216D539FF00AD4B0E /* ImageIO.framework */,
+				D42187D016D539CD00AD4B0E /* SDWebImage.framework */,
 				D42187A016D5336400AD4B0E /* UIKit.framework */,
 				D42187A216D5336400AD4B0E /* Foundation.framework */,
 				D42187A416D5336400AD4B0E /* CoreGraphics.framework */,
@@ -78,8 +106,16 @@
 		D42187A616D5336400AD4B0E /* MGTest */ = {
 			isa = PBXGroup;
 			children = (
+				D42187E316D5AD8B00AD4B0E /* FlickrAPI */,
+				D42187C016D534FC00AD4B0E /* JSONKit */,
+				D42187C616D5352F00AD4B0E /* ImageTableViewCell.h */,
+				D42187C716D5352F00AD4B0E /* ImageTableViewCell.m */,
+				D42187C816D5352F00AD4B0E /* ImageViewController.h */,
+				D42187C916D5352F00AD4B0E /* ImageViewController.m */,
 				D42187AF16D5336400AD4B0E /* AppDelegate.h */,
 				D42187B016D5336400AD4B0E /* AppDelegate.m */,
+				D42187BD16D533E900AD4B0E /* RootViewController.h */,
+				D42187BE16D533E900AD4B0E /* RootViewController.m */,
 				D42187A716D5336400AD4B0E /* Supporting Files */,
 			);
 			path = MGTest;
@@ -88,6 +124,7 @@
 		D42187A716D5336400AD4B0E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D42187D616D579B900AD4B0E /* photoDefault.png */,
 				D42187A816D5336400AD4B0E /* MGTest-Info.plist */,
 				D42187A916D5336400AD4B0E /* InfoPlist.strings */,
 				D42187AC16D5336400AD4B0E /* main.m */,
@@ -97,6 +134,26 @@
 				D42187B616D5336400AD4B0E /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D42187C016D534FC00AD4B0E /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				D42187C116D5351600AD4B0E /* JSONKit.h */,
+				D42187C216D5351600AD4B0E /* JSONKit.m */,
+			);
+			name = JSONKit;
+			sourceTree = "<group>";
+		};
+		D42187E316D5AD8B00AD4B0E /* FlickrAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D42187C416D5352F00AD4B0E /* FlickrAPI.h */,
+				D42187C516D5352F00AD4B0E /* FlickrAPI.m */,
+				D42187CA16D5352F00AD4B0E /* WebServiceClient.h */,
+				D42187CB16D5352F00AD4B0E /* WebServiceClient.m */,
+			);
+			name = FlickrAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +211,7 @@
 				D42187B316D5336400AD4B0E /* Default.png in Resources */,
 				D42187B516D5336400AD4B0E /* Default@2x.png in Resources */,
 				D42187B716D5336400AD4B0E /* Default-568h@2x.png in Resources */,
+				D42187D716D579B900AD4B0E /* photoDefault.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +224,12 @@
 			files = (
 				D42187AD16D5336400AD4B0E /* main.m in Sources */,
 				D42187B116D5336400AD4B0E /* AppDelegate.m in Sources */,
+				D42187BF16D533E900AD4B0E /* RootViewController.m in Sources */,
+				D42187C316D5351600AD4B0E /* JSONKit.m in Sources */,
+				D42187CC16D5352F00AD4B0E /* FlickrAPI.m in Sources */,
+				D42187CD16D5352F00AD4B0E /* ImageTableViewCell.m in Sources */,
+				D42187CE16D5352F00AD4B0E /* ImageViewController.m in Sources */,
+				D42187CF16D5352F00AD4B0E /* WebServiceClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,9 +306,14 @@
 		D42187BB16D5336400AD4B0E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MGTest\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MGTest/MGTest-Prefix.pch";
 				INFOPLIST_FILE = "MGTest/MGTest-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -253,9 +322,14 @@
 		D42187BC16D5336400AD4B0E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MGTest\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MGTest/MGTest-Prefix.pch";
 				INFOPLIST_FILE = "MGTest/MGTest-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

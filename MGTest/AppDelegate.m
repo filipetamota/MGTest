@@ -2,17 +2,21 @@
 //  AppDelegate.m
 //  MGTest
 //
-//  Created by Filipe on 20/02/13.
+//  Created by Filipe on 19/02/13.
 //  Copyright (c) 2013 Filipe. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
 
 @implementation AppDelegate
 
+@synthesize navcon, window;
+
 - (void)dealloc
 {
-    [_window release];
+    [window release];
+    [navcon release];
     [super dealloc];
 }
 
@@ -21,8 +25,16 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    RootViewController *rootViewController = [[RootViewController alloc] init];
+    navcon = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    [rootViewController release];
+    
+    self.window.rootViewController = navcon;
+    
     [self.window makeKeyAndVisible];
     return YES;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
