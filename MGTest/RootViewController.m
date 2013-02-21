@@ -50,54 +50,63 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    FlickrAPI *flickr = [[FlickrAPI alloc] init];
-    NSString *userId = [flickr userIdForUserName:@"vulture labs"];
-    NSArray *photoSets = [flickr photoSetListWithUserId:userId];
-    NSString *photoSetId = [flickr photoSetIdWithTitle:@"My Faves" photoSets:photoSets];
-    self.photoSet = [NSArray array];
-    self.photoSet = [flickr photosWithPhotoSetId:photoSetId];
-    [flickr release];
-    
-    self.navigationItem.title = [NSString stringWithFormat:@"%d images", [photoSet count]];
-    
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-    tableView.dataSource = (id) self;
-    tableView.delegate = (id) self;
-    self.tableView = tableView;
-    [tableView release];
-    [self.view addSubview:self.tableView];
-    
-    //creates the view and the indicator for the "load more" feature
-    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 480, 44)];
-    UIActivityIndicatorView *loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        loadingIndicator.center = CGPointMake(160, 22);
-        if(self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft || self.interfaceOrientation == UIInterfaceOrientationLandscapeRight){
-            loadingIndicator.center = CGPointMake(240, 22);
-        }
-    } else {
-        loadingIndicator.center = CGPointMake(384, 22);
-        if(self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft || self.interfaceOrientation == UIInterfaceOrientationLandscapeRight){
-            loadingIndicator.center = CGPointMake(512, 22);
-        }
+
+    if(!self.photoSet){
+        FlickrAPI *flickr = [[FlickrAPI alloc] init];
+        NSString *userId = [flickr userIdForUserName:@"vulture labs"];
+        NSArray *photoSets = [flickr photoSetListWithUserId:userId];
+        NSString *photoSetId = [flickr photoSetIdWithTitle:@"My Faves" photoSets:photoSets];
+        self.photoSet = [NSArray array];
+        self.photoSet = [flickr photosWithPhotoSetId:photoSetId];
+        [flickr release];
     }
 
     
-    loadingIndicator.hidesWhenStopped = NO;
-    self.loadingIndicator=loadingIndicator;
-    [loadingIndicator release];
-    [footerView addSubview:self.loadingIndicator];
-    self.footerView=footerView;
-    [footerView release];
+    self.navigationItem.title = [NSString stringWithFormat:@"%d images", [photoSet count]];
     
-    
-    self.footerActivityIndicator=self.loadingIndicator;
-    [[self tableView] setTableFooterView:[self footerView]];
-    
-    //hide the header
-    [self.tableView setContentOffset:CGPointMake(0, 1*TABLEVIEW_CELL_HEIGHT)];
-    
-    [[self activityIndicator] stopAnimating];
+    if(!_tableView){
+        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        tableView.dataSource = (id) self;
+        tableView.delegate = (id) self;
+        self.tableView = tableView;
+        [tableView release];
+        [self.view addSubview:self.tableView];
+    }
+
+    //creates the view and the indicator for the "load more" feature
+    if(!_footerView){
+        UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 480, 44)];
+        UIActivityIndicatorView *loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            loadingIndicator.center = CGPointMake(160, 22);
+            if(self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft || self.interfaceOrientation == UIInterfaceOrientationLandscapeRight){
+                loadingIndicator.center = CGPointMake(240, 22);
+            }
+        } else {
+            loadingIndicator.center = CGPointMake(384, 22);
+            if(self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft || self.interfaceOrientation == UIInterfaceOrientationLandscapeRight){
+                loadingIndicator.center = CGPointMake(512, 22);
+            }
+        }
+        
+        
+        loadingIndicator.hidesWhenStopped = NO;
+        self.loadingIndicator=loadingIndicator;
+        [loadingIndicator release];
+        [footerView addSubview:self.loadingIndicator];
+        self.footerView=footerView;
+        [footerView release];
+        
+        
+        self.footerActivityIndicator=self.loadingIndicator;
+        [[self tableView] setTableFooterView:[self footerView]];
+        
+        //hide the header
+        [self.tableView setContentOffset:CGPointMake(0, 1*TABLEVIEW_CELL_HEIGHT)];
+        
+        [[self activityIndicator] stopAnimating];
+    }
+
 
 }
 
